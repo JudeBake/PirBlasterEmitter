@@ -1,0 +1,195 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Raspberry Pi IR Blaster Emitter"
+Date "2020-03-15"
+Rev "1.0a"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L JB_Mechanical:TH-NPLTD-D5.2 MH1
+U 1 1 5E793987
+P 700 7800
+F 0 "MH1" H 800 7800 50  0000 L CNN
+F 1 "TH-NPLTD-D5.2" H 700 7800 50  0001 C CNN
+F 2 "JB_Mechanical:TH-UPLTD-D5.2" H 700 7800 50  0001 C CNN
+F 3 "~" H 700 7800 50  0001 C CNN
+	1    700  7800
+	1    0    0    -1  
+$EndComp
+$Comp
+L JB_Connector_Barrel_Audio:SJ-435107 J1
+U 1 1 5E79469F
+P 3300 3100
+F 0 "J1" H 3257 3425 50  0000 C CNN
+F 1 "SJ-435107" H 3257 3334 50  0000 C CNN
+F 2 "JB_Connector_Barrel_Audio:SJ-435107" H 3300 3100 50  0001 C CNN
+F 3 "L:\\JudeBake\\Datasheet\\PhoneJack\\sj-435107.pdf" H 3300 3100 50  0001 C CNN
+F 4 "CUI Devices" H 3300 3100 50  0001 C CNN "Manufacturer"
+F 5 "SJ-435107" H 3300 3100 50  0001 C CNN "Manufacturer Part Number"
+F 6 "CP-435107-ND" H 3300 3100 50  0001 C CNN "Digi-Key Part Number"
+	1    3300 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L JB_Connector_Barrel_Audio:SJ-435107 J2
+U 1 1 5E7951F2
+P 3300 4500
+F 0 "J2" H 3257 4825 50  0000 C CNN
+F 1 "SJ-435107" H 3257 4734 50  0000 C CNN
+F 2 "JB_Connector_Barrel_Audio:SJ-435107" H 3300 4500 50  0001 C CNN
+F 3 "L:\\JudeBake\\Datasheet\\PhoneJack\\sj-435107.pdf" H 3300 4500 50  0001 C CNN
+F 4 "CUI Devices" H 3300 4500 50  0001 C CNN "Manufacturer"
+F 5 "SJ-435107" H 3300 4500 50  0001 C CNN "Manufacturer Part Number"
+F 6 "CP-435107-ND" H 3300 4500 50  0001 C CNN "Digi-Key Part Number"
+	1    3300 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L JB_IrEmitter:QEB363GR D1
+U 1 1 5E795B1D
+P 5200 4000
+F 0 "D1" V 5239 3883 50  0000 R CNN
+F 1 "QEB363GR" V 5148 3883 50  0000 R CNN
+F 2 "JB_IrEmitter:QEB363GR" H 5200 4200 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/QEB363-D.pdf" H 5200 4000 50  0001 C CNN
+F 4 "ON Semiconductor" H 5200 4000 50  0001 C CNN "Manufacturer"
+F 5 "QEB363GR" H 5200 4000 50  0001 C CNN "Manufacturer Part Number"
+F 6 "QEB363GRTR-ND" H 5200 4000 50  0001 C CNN "Digi-Key Part Number"
+	1    5200 4000
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 3200 3500
+NoConn ~ 3300 3500
+NoConn ~ 3200 4900
+NoConn ~ 3300 4900
+$Comp
+L power:GND #PWR01
+U 1 1 5E797F10
+P 3600 3500
+F 0 "#PWR01" H 3600 3250 50  0001 C CNN
+F 1 "GND" H 3605 3327 50  0000 C CNN
+F 2 "" H 3600 3500 50  0001 C CNN
+F 3 "" H 3600 3500 50  0001 C CNN
+	1    3600 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5E79868A
+P 3600 4900
+F 0 "#PWR03" H 3600 4650 50  0001 C CNN
+F 1 "GND" H 3605 4727 50  0000 C CNN
+F 2 "" H 3600 4900 50  0001 C CNN
+F 3 "" H 3600 4900 50  0001 C CNN
+	1    3600 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5E798ED5
+P 3700 3400
+F 0 "#FLG01" H 3700 3475 50  0001 C CNN
+F 1 "PWR_FLAG" V 3700 3528 50  0000 L CNN
+F 2 "" H 3700 3400 50  0001 C CNN
+F 3 "~" H 3700 3400 50  0001 C CNN
+	1    3700 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5E79988B
+P 5200 4300
+F 0 "#PWR02" H 5200 4050 50  0001 C CNN
+F 1 "GND" H 5205 4127 50  0000 C CNN
+F 2 "" H 5200 4300 50  0001 C CNN
+F 3 "" H 5200 4300 50  0001 C CNN
+	1    5200 4300
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3500 4500
+Text Label 3750 3300 0    50   ~ 0
+IR_OUT0
+Text Label 3750 3200 0    50   ~ 0
+IR_OUT1
+Text Label 3750 3100 0    50   ~ 0
+IR_OUT2
+Text Label 3750 4700 0    50   ~ 0
+IR_OUT1
+Text Label 3750 4600 0    50   ~ 0
+IR_OUT2
+Wire Wire Line
+	4250 4600 3500 4600
+Wire Wire Line
+	4250 4700 3500 4700
+Wire Wire Line
+	3500 4400 3600 4400
+Wire Wire Line
+	3600 4400 3600 4900
+Wire Wire Line
+	4250 3300 3500 3300
+Wire Wire Line
+	4250 3200 3500 3200
+Wire Wire Line
+	4250 3100 3500 3100
+Wire Wire Line
+	3500 3000 3600 3000
+Wire Wire Line
+	3600 3000 3600 3400
+Wire Wire Line
+	3700 3400 3600 3400
+Connection ~ 3600 3400
+Wire Wire Line
+	3600 3400 3600 3500
+Text Label 4750 3700 0    50   ~ 0
+IR_OUT0
+Wire Wire Line
+	5200 4300 5200 4150
+Wire Wire Line
+	4450 3700 5200 3700
+Wire Wire Line
+	5200 3700 5200 3850
+Wire Bus Line
+	4350 3200 4350 4600
+Entry Wire Line
+	4250 3100 4350 3200
+Entry Wire Line
+	4250 3200 4350 3300
+Entry Wire Line
+	4250 3300 4350 3400
+Entry Wire Line
+	4250 4600 4350 4500
+Entry Wire Line
+	4250 4700 4350 4600
+Entry Wire Line
+	4350 3600 4450 3700
+$Comp
+L JB_Bitmap:JudeBake_Logo G1
+U 1 1 5E79EC4C
+P 9300 6450
+F 0 "G1" H 9300 6327 60  0001 C CNN
+F 1 "JudeBake_Logo" H 9300 6573 60  0001 C CNN
+F 2 "JB_Bitmaps:JB_Logo_4MM" H 9300 6450 50  0001 C CNN
+F 3 "" H 9300 6450 50  0001 C CNN
+	1    9300 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L JB_Bitmap:CC-BY-SA_Logo G2
+U 1 1 5E79F00D
+P 9800 6500
+F 0 "G2" H 9800 6455 60  0001 C CNN
+F 1 "CC-BY-SA_Logo" H 9800 6545 60  0001 C CNN
+F 2 "JB_Bitmaps:CC-BY-SA_4MM" H 9800 6500 50  0001 C CNN
+F 3 "" H 9800 6500 50  0001 C CNN
+	1    9800 6500
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
